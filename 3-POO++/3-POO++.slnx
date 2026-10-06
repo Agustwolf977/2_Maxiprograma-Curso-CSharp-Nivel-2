@@ -1,0 +1,9 @@
+<Solution>
+  <Project Path="1Herencia/1Herencia.csproj" Id="15c96395-3458-4f0e-a76c-7282efa31c52" />
+  <Project Path="2Herencia/2Herencia.csproj" Id="d0e56b13-cee4-4b92-8e34-6fcc86dece33" />
+  <Project Path="3Colecciones/3Colecciones.csproj" Id="67fad95f-f1ce-45d1-a4e7-75f3d110b984" />
+  <Project Path="4SobreescrituraPolimorfismo/4SobreescrituraPolimorfismo.csproj" Id="8b07322a-292c-45a7-a9e7-b27c2e97bbe2" />
+  <Project Path="5Interfaces/5Interfaces.csproj" Id="81196c9c-5157-4d49-826b-097fb874cf73" />
+  <Project Path="6Asociacion/6Asociacion.csproj" Id="394147e2-7d21-4934-a999-08d739472159" />
+  <Project Path="7TiposDeClases/7TiposDeClases.csproj" Id="c783e9ce-3847-4692-950b-97a78b28c8e4" />
+</Solution>
