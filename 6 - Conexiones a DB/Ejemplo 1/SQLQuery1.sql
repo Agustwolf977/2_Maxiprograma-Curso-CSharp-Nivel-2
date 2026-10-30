@@ -1,9 +1,0 @@
-
-
-
-
-SELECT * FROM ELEMENTOS
-
-SELECT * FROM POKEMONS
-
-SELECT Numero, Nombre, Descripcion FROM POKEMONS

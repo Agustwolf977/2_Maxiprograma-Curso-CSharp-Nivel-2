@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ejemplo1
@@ -19,29 +12,26 @@ namespace ejemplo1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            int a, b, r;
             try
             {
-                a = int.Parse(textBox1.Text);
-                b = int.Parse(textBox2.Text);
-                r = a / b;
-                lblResultado.Text = $"= {r}";
+                int resultado = calcular();
+                lblResultado.Text = $"= {resultado}";
             }
-            //catch (FormatException ex)
-            //{
-            //    MessageBox.Show("Por favor, cargar solo números...");
-            //}
-            //catch (DivideByZeroException ex)
-            //{
-            //    MessageBox.Show("No se puede dividir por cero...");
-            //}
-            catch (FormatException ex)
+            catch (FormatException)
             {
-                MessageBox.Show("Error no reconocido... contactar a tu dev...");
+                MessageBox.Show("Por favor, ingresar solo números...");
+            }
+            catch (DivideByZeroException)
+            {
+                MessageBox.Show("No se puede dividir por cero...");
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Error no reconocido... contactar a tu desarrollador...");
             }
             finally
             {
-
+                MessageBox.Show("Finalizó el intento de cálculo.");
             }
         }
 
@@ -49,11 +39,16 @@ namespace ejemplo1
         {
             try
             {
-                return 1;
+                int a = int.Parse(textBox1.Text);
+                int b = int.Parse(textBox2.Text);
+
+                return a / b;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                throw ex;
+                // Relanzamos la excepción para que la
+                // gestione el método button1_Click().
+                throw;
             }
         }
     }
